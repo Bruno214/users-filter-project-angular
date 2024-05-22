@@ -2,17 +2,16 @@
   <div class="left-container">
 
     <div class="top-div">
-
+      <app-user-filtro></app-user-filtro>
     </div>
 
     <div class="main-left-div">
-
-
+      <app-user-list (userClicked)="onUserClicked($event)"></app-user-list>
     </div>
   </div>
 
   <div class="right-div">
-
+    <app-user-details [userDetailsSelected]="userApp"></app-user-details>
   </div>
 
 </div>
