@@ -1,0 +1,58 @@
+<div class="user-details">
+  <mat-list>
+    <mat-divider></mat-divider>
+    <mat-list-item class="u-text-align-center">
+      <span class="mat-h2">Detalhes do usuário</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span class="mat-h2">Nome: </span>
+      <span class="mat-h3">{{userDetailsSelected.nome}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span class="mat-h2">Email: </span>
+      <span class="mat-h3">{{userDetailsSelected.email}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span class="mat-h2">Telefone: </span>
+      <span class="mat-h3">{{userDetailsSelected.telefone | phone }} </span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span class="mat-h2">Endereço: </span>
+      <span class="mat-h3">{{userDetailsSelected?.endereco?.rua}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span class="mat-h2">Status: </span>
+      <span class="mat-h3">{{userDetailsSelected?.status?.online}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span class="mat-h2">Função: </span>
+      <span class="mat-h3">{{userDetailsSelected.funcao}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span class="mat-h2">Data: </span>
+      <span class="mat-h3">{{userDetailsSelected.dataCadastro}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
