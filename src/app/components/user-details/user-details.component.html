@@ -30,14 +30,14 @@
     <mat-divider></mat-divider>
     <mat-list-item>
       <span class="mat-h2">Endereço: </span>
-      <span class="mat-h3">{{userDetailsSelected?.endereco?.rua}}</span>
+      <span class="mat-h3">{{userDetailsSelected.endereco | address}}</span>
     </mat-list-item>
     <mat-divider></mat-divider>
 
     <mat-divider></mat-divider>
     <mat-list-item>
       <span class="mat-h2">Status: </span>
-      <span class="mat-h3">{{userDetailsSelected?.status?.online}}</span>
+      <span class="mat-h3">{{userDetailsSelected.ativo | status}}</span>
     </mat-list-item>
     <mat-divider></mat-divider>
 
@@ -51,7 +51,7 @@
     <mat-divider></mat-divider>
     <mat-list-item>
       <span class="mat-h2">Data: </span>
-      <span class="mat-h3">{{userDetailsSelected.dataCadastro}}</span>
+      <span class="mat-h3">{{ userDetailsSelected.dataCadastro | date: 'dd/MM/yyyy' }}</span>
     </mat-list-item>
     <mat-divider></mat-divider>
   </mat-list>
