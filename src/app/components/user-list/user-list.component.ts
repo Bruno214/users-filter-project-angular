@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IUser } from '../../interfaces/user/user.interface';
 import { usersList } from '../../data/users-list';
 
@@ -9,13 +9,14 @@ import { usersList } from '../../data/users-list';
 })
 export class UserListComponent {
   displayedColumns: string[] = ['name', 'date','status'];
-  dataSource: IUser[] = usersList;
+
+  @Input({required:true, alias:'usersList'})
+  dataSource: IUser[] = [];
+
   @Output() userClicked: EventEmitter<IUser> = new EventEmitter<IUser>();
 
-
-  onUserSelected(linha: IUser) {
-    console.log("clikado ",linha);
-    this.userClicked.emit(linha);
+  onUserSelected(user: IUser) {
+    this.userClicked.emit(user);
 
   }
 }

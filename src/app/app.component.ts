@@ -1,17 +1,25 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { IUser } from './interfaces/user/user.interface';
+import { usersList } from './data/users-list';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  userApp: IUser = {} as IUser;
+export class AppComponent implements OnInit{
+  user: IUser = {} as IUser;
+  showUserDetails: boolean = false;
+  usersListApp: IUser[] = [];
 
-  onUserClicked(userSelected: IUser) {
-   console.log("estou no componente pai appComponente", userSelected)
-   this.userApp = userSelected;
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.usersListApp = usersList;
+    }, 3000)
   }
 
+  onUserClicked(userSelected: IUser) {
+   this.user = userSelected;
+   this.showUserDetails = true;
+  }
 }

@@ -6,12 +6,15 @@
     </div>
 
     <div class="main-left-div">
-      <app-user-list (userClicked)="onUserClicked($event)"></app-user-list>
+      <app-user-list (userClicked)="onUserClicked($event)" [usersList]="usersListApp"></app-user-list>
     </div>
   </div>
 
-  <div class="right-div">
-    <app-user-details [userDetailsSelected]="userApp"></app-user-details>
-  </div>
+  <ng-template [ngIf]="showUserDetails">
+    <div class="right-div">
+      <app-user-details [userDetailsSelected]="user"></app-user-details>
+    </div>
+  </ng-template>
+
 
 </div>
