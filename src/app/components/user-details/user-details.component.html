@@ -9,14 +9,14 @@
     <mat-divider></mat-divider>
     <mat-list-item>
       <span class="mat-h2">Nome: </span>
-      <span class="mat-h3">{{userDetailsSelected.nome}}</span>
+      <span class="mat-h3">{{userDetailsSelected.nome | dashIfEmpty }}</span>
     </mat-list-item>
     <mat-divider></mat-divider>
 
     <mat-divider></mat-divider>
     <mat-list-item>
       <span class="mat-h2">Email: </span>
-      <span class="mat-h3">{{userDetailsSelected.email}}</span>
+      <span class="mat-h3">{{userDetailsSelected.email | dashIfEmpty}}</span>
     </mat-list-item>
     <mat-divider></mat-divider>
 
@@ -44,14 +44,14 @@
     <mat-divider></mat-divider>
     <mat-list-item>
       <span class="mat-h2">Função: </span>
-      <span class="mat-h3">{{userDetailsSelected.funcao}}</span>
+      <span class="mat-h3">{{userDetailsSelected.funcao | dashIfEmpty}}</span>
     </mat-list-item>
     <mat-divider></mat-divider>
 
     <mat-divider></mat-divider>
     <mat-list-item>
       <span class="mat-h2">Data: </span>
-      <span class="mat-h3">{{ userDetailsSelected.dataCadastro | date: 'dd/MM/yyyy' }}</span>
+      <span class="mat-h3">{{ userDetailsSelected.dataCadastro | date: 'dd/MM/yyyy' | dashIfEmpty }}</span>
     </mat-list-item>
     <mat-divider></mat-divider>
   </mat-list>
